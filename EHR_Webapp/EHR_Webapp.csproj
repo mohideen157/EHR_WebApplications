@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <StartupObject>EHR_Webapp.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Home\assets\**" />
+    <Compile Remove="Views\Landing\**" />
+    <Compile Remove="Views\NewProgramcode\**" />
+    <Compile Remove="Views\Program\**" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="Views\Home\assets\**" />
+    <Content Remove="Views\Landing\**" />
+    <Content Remove="Views\NewProgramcode\**" />
+    <Content Remove="Views\Program\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="Views\Home\assets\**" />
+    <EmbeddedResource Remove="Views\Landing\**" />
+    <EmbeddedResource Remove="Views\NewProgramcode\**" />
+    <EmbeddedResource Remove="Views\Program\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="Views\Home\assets\**" />
+    <None Remove="Views\Landing\**" />
+    <None Remove="Views\NewProgramcode\**" />
+    <None Remove="Views\Program\**" />
+    <None Remove="wwwroot\lib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\NewLandingController.cs" />
+    <Compile Remove="Controllers\ProgramCodeController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\SLandMenu.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>
